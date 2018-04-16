@@ -2,9 +2,8 @@
   <div class="container">
     <div class="block">
       <h2>Contact</h2>
-      {>"components__{components.when-to-contact.template}"/}
       <dl class="list--definition">
-        {#components.contact.contact-points}
+        {#data.contact-points}
           <dt>Email: </dt>
           <dd>
             <a href="mailto:{.email}">{.email}</a>
@@ -17,9 +16,8 @@
           {#.addresses}
             <dd>{.}</dd>
           {/.addresses}
-        {/components.contact.contact-points}
+        {/data.contact-points}
       </dl>
-      <p>{components.when-to-contact.text}</p>
     </div>
   </div>
 </section>

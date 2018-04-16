@@ -9,12 +9,10 @@
     <link href="http://beta.parliament.uk/search/opensearch" rel="search" title="UK Parliament" type="application/opensearchdescription+xml">
 </head>
 <body>
-    {>"components__{components.cookie-banner}"/}
-    {>"components__{components.banner}"/}
-    {>"components__{components.header}"/}
-    {>"components__{components.top-navigation}"/}
-    {>"{layout.page_template}"/}
-    {>"components__{components.footer}"/}
+    {#components}
+      {>"components__{name}" name=name data=data/}
+    {/components}
     <script src="https://s3-eu-west-1.amazonaws.com/web1live.pugin-website/1.7.5/javascripts/main.js"></script>
 </body>
 </html>
+  {@lt key=$idx value=3}{/lt}
