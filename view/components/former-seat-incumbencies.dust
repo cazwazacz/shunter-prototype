@@ -1,0 +1,15 @@
+<div class="section">
+    <div class="container">
+        <h2>Former MPs</h2>
+        <ul class="list--pipe">
+            {#data}
+                <li>
+                    <div class="list--details">
+                        <h3><a href="/people/{graph_id}">{member_name}</a></h3>
+                        <p>{date_range}</p>
+                    </div>
+                </li>
+            {/data}
+        </ul>
+    </div>
+</div>
