@@ -4,22 +4,22 @@
           </li>
 
 
-          {#data}
+          {#data.letters}
             {?active}
-                <li class="active" data-letter="{letter}">
+                <li class="active" data-letter="{.letter}">
                   <span>{letter}</span>
                 </li>
             {:else}
               {?presence}
-                <li  data-letter="{letter}">
-                  <a data-atoz-see="true" href="/people/a-z/{letter}">{letter}</a>
+                <li  data-letter="{.letter}">
+                  <a data-atoz-see="true" href="/{data.object_name}/a-z/{.letter}">{letter}</a>
                 </li>
               {/presence}
             {/active}
             {^presence}
-              <li data-letter="{letter}">
+              <li data-letter="{.letter}">
                 <span>{letter}</span>
               </li>
             {/presence}
-          {/data}
+          {/data.letters}
 </nav>
