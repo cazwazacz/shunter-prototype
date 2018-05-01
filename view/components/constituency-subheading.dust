@@ -1,3 +1,13 @@
 <div class="container">
-    <p class="lead">Constituency in <a href="/places/W08000001">{data}</a></p>
+    <!-- {?current}
+       ello
+       {:else}
+       wazaask
+       {/current} -->
+    {?data.current}
+       <p class="lead">Constituency in <a href="/places/W08000001">{data.subheading}</a></p>
+    {:else}
+        <p>{data.subheading}</p>
+        <p>This is a former constituency. <a href="/constituencies/current">View current constituencies</a>.</p>
+    {/data.current}
 </div>    
